@@ -1,7 +1,6 @@
 {
-  "name": "vite-vanilla-ts-lib-starter",
-  "private": true,
-  "version": "0.0.2",
+  "name": "magic-link-popup",
+  "version": "0.0.0",
   "main": "./dist/vite-vanilla-ts-lib-starter.cjs",
   "module": "./dist/vite-vanilla-ts-lib-starter.mjs",
   "exports": {
@@ -26,7 +25,8 @@
     "format:styles": "stylelint ./**/*.{css,scss} --fix",
     "format": "yarn format:scripts && yarn format:styles",
     "prepare": "husky install && husky set .husky/pre-commit 'yarn lint-staged' && git add .husky/pre-commit",
-    "uninstall-husky": "yarn remove husky --no-save && git config --unset core.hooksPath && yarn rimraf .husky"
+    "uninstall-husky": "yarn remove husky --no-save && git config --unset core.hooksPath && yarn rimraf .husky",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.6",
@@ -45,6 +45,7 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
+    "standard-version": "^9.5.0",
     "stylelint": "^16.2.0",
     "stylelint-config-recommended": "^14.0.0",
     "stylelint-config-sass-guidelines": "^11.0.0",

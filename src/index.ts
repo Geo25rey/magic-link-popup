@@ -1,5 +1,3 @@
-import "./style.css";
-
 import { Magic } from "magic-sdk";
 import {
   OAuthProvider,
@@ -162,11 +160,11 @@ async function handleLoginRouteLoaded() {
 window.addEventListener("load", handleLoginRouteLoaded);
 
 const loginPopupDefaultOptions: InitOptions["loginPopup"] = {
-  width: (loginOptions: LoginOptions) => 600,
-  height: (loginOptions: LoginOptions) => 600,
-  left: (loginOptions: LoginOptions, width: number) =>
+  width: (_loginOptions: LoginOptions) => 600,
+  height: (_loginOptions: LoginOptions) => 600,
+  left: (_loginOptions: LoginOptions, width: number) =>
     window.innerWidth / 2 - width / 2,
-  top: (loginOptions: LoginOptions, height: number) =>
+  top: (_loginOptions: LoginOptions, height: number) =>
     window.innerHeight / 2 - height / 2,
 };
 
