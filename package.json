@@ -1,12 +1,12 @@
 {
   "name": "magic-link-popup",
   "version": "0.0.0",
-  "main": "./dist/vite-vanilla-ts-lib-starter.cjs",
-  "module": "./dist/vite-vanilla-ts-lib-starter.mjs",
+  "main": "./dist/magic-link-popup.cjs",
+  "module": "./dist/magic-link-popup.mjs",
   "exports": {
     ".": {
-      "require": "./dist/vite-vanilla-ts-lib-starter.cjs",
-      "import": "./dist/vite-vanilla-ts-lib-starter.mjs"
+      "require": "./dist/magic-link-popup.cjs",
+      "import": "./dist/magic-link-popup.mjs"
     },
     "./dist/": {
       "import": "./dist/",
@@ -26,7 +26,7 @@
     "format": "yarn format:scripts && yarn format:styles",
     "prepare": "husky install && husky set .husky/pre-commit 'yarn lint-staged' && git add .husky/pre-commit",
     "uninstall-husky": "yarn remove husky --no-save && git config --unset core.hooksPath && yarn rimraf .husky",
-    "release": "standard-version"
+    "release": "standard-version && git push --follow-tags origin master && cd build && yarn publish && cd .."
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.6",
