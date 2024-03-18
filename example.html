@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" id="email" />
+      <input type="phone" id="phone" />
+      <select id="selection">
+        <option value="magic-link">Magic Link</option>
+        <option value="email-OTP">Email</option>
+        <option value="sms">Phone</option>
+        <option value="oauth-google">Google</option>
+      </select>
+      <button
+        onclick="
+        const type = document.getElementById('selection').value;
+        switch (type) {
+          case 'email-OTP':
+          case 'magic-link':
+            login({type, email: document.getElementById('email').value });
+            break;
+          case 'sms':
+            login({type, phone: document.getElementById('phone').value });
+            break;
+          case 'oauth-google':
+            login({type: 'oauth', provider: 'google' });
+            break
+        }
+      "
+      >
+        Login
+      </button>
+      <button onclick="logout()">Logout</button>
+    </div>
+    <script type="module" src="/src/example.ts"></script>
+  </body>
+</html>
