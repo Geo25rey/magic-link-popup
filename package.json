@@ -7,16 +7,12 @@
     ".": {
       "require": "./dist/magic-link-popup.cjs",
       "import": "./dist/magic-link-popup.mjs"
-    },
-    "./dist/": {
-      "import": "./dist/",
-      "require": "./dist/"
     }
   },
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite --host",
-    "build": "rimraf build/**/* && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts && copyfiles ./package.json build",
+    "build": "rimraf dist/**/* && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
     "lint:scripts": "eslint . --ext .ts",
@@ -26,7 +22,7 @@
     "format": "yarn format:scripts && yarn format:styles",
     "prepare": "husky install && husky set .husky/pre-commit 'yarn lint-staged' && git add .husky/pre-commit",
     "uninstall-husky": "yarn remove husky --no-save && git config --unset core.hooksPath && yarn rimraf .husky",
-    "release": "standard-version && git push --follow-tags origin master && cd build && yarn publish && cd .."
+    "release": "standard-version && git push --follow-tags origin master && yarn publish"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.6",
