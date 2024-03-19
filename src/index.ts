@@ -168,6 +168,8 @@ const loginPopupDefaultOptions: InitOptions["loginPopup"] = {
     window.innerHeight / 2 - height / 2,
 };
 
+export { getMagic };
+
 export function init(
   magicApiKey: string,
   loadingRoute: string,
