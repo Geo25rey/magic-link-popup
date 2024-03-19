@@ -1,6 +1,6 @@
 {
   "name": "magic-link-popup",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./dist/magic-link-popup.cjs",
   "module": "./dist/magic-link-popup.mjs",
   "exports": {
@@ -10,9 +10,6 @@
     }
   },
   "types": "./dist/index.d.ts",
-  "files": [
-    "./dist/*"
-  ],
   "scripts": {
     "dev": "vite --host",
     "build": "rimraf dist/**/* && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
