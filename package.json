@@ -1,6 +1,6 @@
 {
   "name": "magic-link-popup",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/magic-link-popup.cjs",
   "module": "./dist/magic-link-popup.mjs",
   "exports": {

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/Geo25rey/magic-link-improved/compare/v0.0.2...v0.0.3) (2024-03-19)
+
+
+### Bug Fixes
+
+* package include files ([c5a1fba](https://github.com/Geo25rey/magic-link-improved/commit/c5a1fba6919a8fd0636025ec1613e6753940e3f3))
+
 ### [0.0.2](https://github.com/Geo25rey/magic-link-improved/compare/v0.0.1...v0.0.2) (2024-03-19)
 
 
