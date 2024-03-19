@@ -10,6 +10,9 @@
     }
   },
   "types": "./dist/index.d.ts",
+  "files": [
+    "./dist/*"
+  ],
   "scripts": {
     "dev": "vite --host",
     "build": "rimraf dist/**/* && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
