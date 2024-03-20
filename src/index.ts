@@ -157,7 +157,9 @@ async function handleLoginRouteLoaded() {
   }
 }
 
-window.addEventListener("load", handleLoginRouteLoaded);
+if (typeof window !== "undefined") {
+  window.addEventListener("load", handleLoginRouteLoaded);
+}
 
 const loginPopupDefaultOptions: InitOptions["loginPopup"] = {
   width: (_loginOptions: LoginOptions) => 600,
